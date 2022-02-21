@@ -201,8 +201,8 @@ label i{
     display: flex;
     flex-direction: column;
     text-align: left;
-
 }
+
 .filtersItems
 {
     display: flex;
@@ -215,7 +215,7 @@ label i{
     border: solid 2px var(--grey);
     border-radius: 50px;
     height: 40px;
-    font-size:medium;
+    font-size: 13px;
 }
 .filtersItems:hover{
     transform: scale(1.05);
@@ -231,6 +231,7 @@ label i{
     color: var(--blue);
     padding: 13px;
     border-radius: 50%;
+    margin-right: 10px;
     height: 40px;
     background-color: var(--blueLight);
     }
@@ -292,9 +293,9 @@ aside  {
 #card-container-lodg .card{
     object-fit: cover;
     background-color: white;
-    width: 250px;
+    width: 245px;
     height: 210px;
-    margin: 3%;
+    margin: 2%;
     border: solid 5px #ffffff;
     border-radius: 20px;
     overflow: hidden;
@@ -463,13 +464,36 @@ footer span ul li{
 }
 
 /***Media queries***/
-
-@media screen and (max-width: 1440px) {
+ 
+@media screen and (max-width: 1280px) { /*** Kindle tablette 800 x 1280 ***/
     
-}
-
-@media screen and (max-width: 992px) {
-    
+    #lodging {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;        
+            }
+    aside{
+        width: 100%;
+        max-width:max-content;
+        margin: 10px;
+            }
+           
+    #card-container-lodg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-width: 320px;
+            }
+            
+    #card-container-lodg .card{
+        object-fit: cover;
+        height: 200px;
+        width: 245px;
+        }
+   
 }
 
 @media screen and (max-width: 768px) {
@@ -487,9 +511,10 @@ header
 
 #topNav li:hover
         {
+
     height: 100px;
     border-top: none;
-    border-bottom: solid 3px var(--blue)
+    border-bottom: solid 3px var(--blue);
         }
     
 #topNav ul li
@@ -560,16 +585,9 @@ header
     
     /*** SECTION HEBERGEMENTS***/
         
-#lodging {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;        
-        }
+
 aside{
     width: 100%;
-    max-width: 500px;
         }
        
 #card-container-lodg{
@@ -578,13 +596,15 @@ aside{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    min-width: 320px;
+    min-width: 250px;
+
         }
         
 #card-container-lodg .card{
     object-fit: cover;
     height: 200px;
     width: 100%;
+    
     }
  
 
@@ -636,14 +656,19 @@ footer .container{
 {
     aside  {
         margin: 0px;
-        padding: 20px 0px 20px 0px;
-        max-width: 350px;
+        padding: 20px 5px 20px 5px;
+
     }
     #card-container-lodg{    
-        margin: 0px;    
+        margin: 0px;  
+        max-width: 320px; 
+         
     }    
     #card-container-lodg .card{
-        margin: 0%;
+        margin: 5%;
+        max-width: 240px;
+        max-height: 200px;
+        overflow: hidden;
     }
 }
     
