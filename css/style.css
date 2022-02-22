@@ -44,7 +44,8 @@ a{
 }
 
 .card{
-    box-shadow: 0px 5px 20px rgb(183, 183,183) ;
+    box-shadow: 0px 5px 20px rgb(183, 183,183);
+    background-color: white;
     border: none;
 }
 .card:hover{
@@ -60,11 +61,11 @@ a{
     font-size: 12px;
     margin-bottom: 5px;
 }
-h3:hover
+.card h3:hover
 {
     color: var(--blue);
 }
-p:hover
+.card p:hover
 {
     color: var(--blue);
 }
@@ -307,7 +308,7 @@ aside  {
     padding: 30px 10px 30px;
     padding-bottom: 0px;
     margin-bottom: 60px;
-    margin:20px;
+    margin:15px;
   }
 
 #container-lodg{
@@ -317,17 +318,16 @@ aside  {
     flex-wrap: wrap;
 
 }
-#lodging h1{
+#lodging h2{
     display: flex;
     flex-direction: column;
     justify-content: left;
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 
 #container-lodg .card{
     object-fit: cover;
-    background-color: white;
     width: 245px;
     height: 200px;
     margin: 2%;
@@ -347,8 +347,7 @@ aside  {
 
   .more {
     font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 40px;
 }
 /*** SECTION POPULAIRES***/
 
@@ -358,7 +357,6 @@ aside  {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
-    font-size: 1.3rem;
 }
 
 aside #container-popular .card {
@@ -401,6 +399,11 @@ aside #container-popular .card {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-top: 20px;
+}
+#activities h2{
+    padding-bottom: 10px;
+    padding-left: 30px;
 }
 
 .container-activities{
@@ -410,12 +413,11 @@ aside #container-popular .card {
     
 }
 .container-activities-row{
-    max-width: 250px;
+    width: 50%;
 
 }
 .container-activities-column{
-    max-width: 500px;
-  
+    width: 50%;
 }
   .img-act{
     width: 100%;
@@ -430,19 +432,23 @@ aside #container-popular .card {
     height: 170px;
   }
   .container-activities-column .card-body{
-      padding: 15px 15px 5px;
+    padding: 15px 15px 10px;
   }
   .container-activities-row .card-body{
-    padding: 15px 15px 5px;
+    padding: 15px 15px 10px;
 }
 .container-activities-column .card{
     max-width: 100%;
     border-radius: 15px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
 }
 .container-activities-row .card{
     max-width: 100%;
     border-radius: 15px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 /*** FOOTER***/
 
@@ -509,7 +515,25 @@ footer ul li{
         }
 
     /***ACTIVITES***/
+    
+    .img-act{
+        width: 100%;
+        height: 300px;
 
+      }
+      .img-act-small{
+
+        width: 100%;
+        height: 150px;
+      }
+      .container-activities-column .card{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .container-activities-row .card{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
         
 /*** FOOTER***/
 
@@ -525,7 +549,9 @@ footer ul li{
 }
 
 @media screen and (max-width: 768px) {
-   
+   /*** Général**/
+
+  
     /*** header ***/
 header 
         {
@@ -615,23 +641,18 @@ header
         
 
 aside{
-    max-width: 450px;
-    border-radius: 0px;
+    width: 100%
         }
 .lod{
     background-color: white;
 }
-       
+  
 #container-lodg{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     width: 100%;
     padding-right: 5px;
-    
+    max-width: 768px;
         }
+      
 #container-lodg .card{
     width: 100%;
 }
@@ -649,10 +670,13 @@ aside{
 }
 .container-activities-row{
     width: 100%;
+
 }
 .container-activities-column{
     width: 100%;
+  
 }
+
 .container-activities .card{
 overflow: hidden;
     height: 240px;
@@ -660,6 +684,11 @@ overflow: hidden;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.container-activities-row .card{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 .img-act{
     height: 180px;
     width: 100%;
@@ -700,22 +729,27 @@ footer ul a{
     aside  {
         margin: 0px;
         padding: 20px 5px 20px 5px;
-        max-width: 320px;
+        max-width: 300px;
     }
- 
+    #lodging h2{
+          padding-left: 5px;
+          padding-bottom: 15px;
+          padding-top: 20px;
+    }
     #container-lodg{  
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;  
-        margin-right: 10%;          
+        
+        min-width: 180px;
+        max-width: 320px;        
     }    
+ 
     #container-lodg .card{
         width: 265px;
         overflow: hidden;
     }
    section #activities{
         max-width: 200px;
+    }
+    #activities h2{
+        padding-bottom: 10px;
+        padding-left: 5px;
     }
