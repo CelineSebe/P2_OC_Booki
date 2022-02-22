@@ -69,10 +69,10 @@ p:hover
     color: var(--blue);
 }
 
-.blueStars{
+.blue-stars{
     color: var(--blue);
 }
-.greyStars{
+.grey-stars{
     color:var(--blueLight);
     
 }
@@ -90,14 +90,14 @@ header
     padding: 0 20 20 0px;
 }
 
-#topNav ul
+#top-nav ul
 {
     display: flex;
     flex-wrap: nowrap;
     list-style: none;   
 }
 
-#topNav ul li
+#top-nav ul li
 {
     display: flex;
     flex-direction: column;
@@ -108,27 +108,27 @@ header
     font-size: large;
 }
 
-#topNav a
+#top-nav a
 {
     color: black;
     text-decoration: none;
 }
 
-#topNav a:hover
+#top-nav a:hover
 {
     color: var(--blue);
 }
-#topNav li:hover
+#top-nav li:hover
 {
     border-top: solid 3px var(--blue);
 }
-#topLogo
+#top-logo
 {
     display: flex;
     justify-content: center;
     align-items: left;
 }
-#topLogo img
+#top-logo img
 {
     object-fit: cover;
     height: 70%;
@@ -159,17 +159,17 @@ main img
     margin-bottom: 20px;
     width: 100%;
 }
-.searchTitle h1
+.search-title h1
 {
     margin-top: 20px;
     margin-bottom: 5px;
 }
-.searchTitle p
+.search-title p
 {
     margin-bottom: 20px;
     font-size: 17px;
 }
-.searchForm
+.search-form
 {
     display: flex;
     justify-content: flex-start;
@@ -202,11 +202,11 @@ label i{
     max-width: 200px;
     background: transparent;
 }
-.searchForm .button:hover
+.search-form .button:hover
 {
     cursor: pointer;
 }
-.searchForm .button
+.search-form .button
 {
     border: none;
     width: 150px;
@@ -222,7 +222,7 @@ label i{
 {
     display: none;
 }
-.containerItems
+.container-items
 {
     display: flex;
     flex-wrap: wrap;
@@ -231,14 +231,14 @@ label i{
     margin: 10px 0;
     list-style: none;
 }
-.searchFilters
+.search-filters
 {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.filtersItems
+.filters-items
 {
     display: flex;
     align-items: center;
@@ -252,13 +252,13 @@ label i{
     height: 40px;
     font-size: 13px;
 }
-.filtersItems:hover{
+.filters-items:hover{
     transform: scale(1.05);
     transition: 0.2s; 
     cursor: pointer;
     color:var(--blue);
 }
-.filtersItems i
+.filters-items i
 {
     display: flex;
     align-items: center;
@@ -270,13 +270,13 @@ label i{
     height: 40px;
     background-color: var(--blueLight);
     }
-.searchInfo
+.search-info
 {
     display:flex;
     align-items: baseline;
 }
 
-.searchInfo .fas
+.search-info .fas
 {
     border: solid 2px var(--grey);
     border-radius: 50%;
@@ -284,7 +284,7 @@ label i{
     font-size: 13px;
     padding: 8px 10px;
 }
-.searchInfo p
+.search-info p
 {
     display: flex;
     flex-wrap: wrap;
@@ -335,7 +335,7 @@ aside  {
     border-radius: 20px;
     overflow: hidden;
 }
-.card .imgLod {
+.card .img-lod {
     height: 115px;
 }
   
@@ -374,7 +374,7 @@ aside #container-popular .card {
   #container-popular figure{
       display:flex;
   }
-.imgPop {
+.img-pop {
     height: 180px;
     width: 40%;
 }
@@ -389,7 +389,7 @@ aside #container-popular .card {
 }
 
     
-#container-popular .blueStars {
+#container-popular .blue-stars {
     font-size: small;
     padding-top: 65px;
     padding-left: 5px;
@@ -471,7 +471,7 @@ footer a{
     display: inline-block;
     font-size: 15px/20px;
 } 
-footer span ul li{
+footer ul li{
     list-style-type: none;
 }
 
@@ -539,27 +539,27 @@ header
     padding: 0 10 10 0px;
         }
         
-#topNav li:hover
+#top-nav li:hover
         {
     border-top: none;
     border-bottom: solid 3px var(--blue);
         }
     
-#topNav ul li
+#top-nav ul li
         {   
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
         }
-#topLogo
+#top-logo
         {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
         }
-#topLogo img
+#top-logo img
         {
     padding-bottom: 0px;
         }
@@ -585,18 +585,18 @@ header
     display: initial; /*** Icône loupe affichée en mode smartphone ***/
         
         }
-.searchForm
+.search-form
         {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
         }
-.searchForm .logo_loupe:hover
+.search-form .logo_loupe:hover
         {
     cursor: pointer;
         }
-.searchForm .logo_loupe
+.search-form .logo_loupe
         {
     display:inline;
     border: none;
@@ -622,7 +622,7 @@ aside{
     background-color: white;
 }
        
-#card-container-lodg{
+#container-lodg{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -632,7 +632,7 @@ aside{
     padding-right: 5px;
     
         }
-#card-container-lodg .card{
+#container-lodg .card{
     width: 100%;
 }
 
@@ -703,7 +703,7 @@ footer ul a{
         max-width: 320px;
     }
  
-    #card-container-lodg{  
+    #container-lodg{  
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -712,7 +712,7 @@ footer ul a{
         width: 100%;  
         margin-right: 10%;          
     }    
-    #card-container-lodg .card{
+    #container-lodg .card{
         width: 265px;
         overflow: hidden;
     }
