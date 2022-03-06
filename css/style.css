@@ -16,11 +16,13 @@
 html,
 body {
     width: 100%;
+    margin: auto;
 }
 body {
     font-family: "Raleway", Tahoma, sans-serif;
     color: black;
     max-width: 1440px;
+    min-width: 320px;
 }
 
 h1{
@@ -43,15 +45,13 @@ a{
     text-decoration: none;
 }
 
+
 .card{
     box-shadow: 0px 5px 20px rgb(183, 183,183);
     background-color: white;
     border: none;
 }
-.card:hover{
-    transform: scale(1.05);
-    transition: 0.2s; 
-}
+
 .card-body h3 {
     font-weight: 700;
     margin-bottom: 5px;
@@ -75,9 +75,7 @@ a{
 }
 .grey-stars{
     color:var(--blueLight);
-    
 }
-
 
 /*** HEADER***/
 
@@ -94,17 +92,16 @@ header
 #top-nav ul
 {
     display: flex;
-    flex-wrap: nowrap;
     list-style: none;   
 }
 
-#top-nav ul li
+#top-nav li
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    min-width: 155px;
     height: 110px; 
     font-size: large;
 }
@@ -173,35 +170,35 @@ main img
 .search-form
 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 400px;
     height: 50px;
     border: solid 1px white;
     border-radius: 15px;
     margin: 20px 0 30px 0;
-    margin-bottom: 30px;
+    padding: 0px;
 }
 label{
     display: inline-block;
-    height: 50px;
     width: 50px;
+    height: 50px;
     background-color: rgb(222, 223, 223);
     border-radius: 15px 0px 0px 15px;
 }
 label i{
-    padding: 17px 20px;
-    
+    padding: 17px 20px;    
 }
 
 #city
 {
-    display: inline-block;
     text-align: center;
     height: 50px;
-    border: solid 1px var(--grey);
+    border: none;
     max-width: 200px;
+    font-weight: 700;
     background: transparent;
+    padding: 0px;
 }
 .search-form .button:hover
 {
@@ -209,14 +206,16 @@ label i{
 }
 .search-form .button
 {
+    display: inline-block;
     border: none;
-    width: 150px;
+    min-width: 150px;
+    max-width: 200px;
     height: 50px;
     background-color: var(--blue);
     color: white;
-    padding: 4px 4px ;
+    padding: 0px;
     font-size: 14px;
-    font-weight: Bold;
+    font-weight: bold;
     border-radius: 0 20px 20px 0;
 }
 .logo_loupe
@@ -305,10 +304,10 @@ aside  {
     width: max-content;
     background-color: var(--grey);
     border-radius: 20px;
-    padding: 30px 10px 30px;
+    padding: 30px 10px;
     padding-bottom: 0px;
     margin-bottom: 60px;
-    margin:15px;
+    margin: 15px;
   }
 
 #container-lodg{
@@ -318,19 +317,22 @@ aside  {
     flex-wrap: wrap;
 
 }
-#lodging h2{
+.lod{
     display: flex;
     flex-direction: column;
     justify-content: left;
-    padding-left: 50px;
 }
+.lod h2{
+    padding-left: 50px;
+    margin-bottom: 20px;
 
+}
 
 #container-lodg .card{
     object-fit: cover;
     width: 245px;
     height: 200px;
-    margin: 2%;
+    margin: 1%;
     border: solid 5px #ffffff;
     border-radius: 20px;
     overflow: hidden;
@@ -342,8 +344,7 @@ aside  {
 #container-lodg .card-body {
     padding: 7px 7px 3px 7px;
     text-decoration-line: none;
-}
-  
+}  
 
   .more {
     font-weight: 700;
@@ -356,7 +357,9 @@ aside  {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+
 }
 
 aside #container-popular .card {
@@ -385,11 +388,10 @@ aside #container-popular .card {
     padding-top: 10px;
     padding-left: 5px;
 }
-
     
 #container-popular .blue-stars {
     font-size: small;
-    padding-top: 65px;
+    padding-top: 55px;
     padding-left: 5px;
   }
 
@@ -403,7 +405,7 @@ aside #container-popular .card {
 }
 #activities h2{
     padding-bottom: 10px;
-    padding-left: 30px;
+    padding-left: 50px;
 }
 
 .container-activities{
@@ -455,6 +457,7 @@ aside #container-popular .card {
 footer{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     min-height: 220px;
     width: 100%;
     background-color: rgb(222, 223, 223);
@@ -463,7 +466,7 @@ footer{
 
 footer nav{
     margin-right: 20px;
-    padding: 100px;
+    padding: 70px;
     line-height: 30px;
 }
 
@@ -483,7 +486,8 @@ footer ul li{
 
 /***Media queries***/
  
-@media screen and (max-width: 1280px) { /*** Kindle tablette 800 x 1280 ***/
+@media screen and (max-width: 992px) { /*** Kindle tablette 800 x 1280 ***/
+    
     
     /*** Hébergements***/
     #lodging {
@@ -494,25 +498,21 @@ footer ul li{
         flex-wrap: wrap;        
             }
     aside{
-        width: 100%;
-        max-width:max-content;
+        width: 100%;        
         margin: 10px;
+        max-width: max-content;
             }
-           
-    #container-lodg{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        min-width: 320px;
-            }
-            
+    
+    
     #container-lodg .card{
         object-fit: cover;
         height: 200px;
         width: 245px;
         margin: 3%;
         }
+.more{
+    margin-top: 10px;
+}
 
     /***ACTIVITES***/
     
@@ -538,7 +538,7 @@ footer ul li{
 /*** FOOTER***/
 
     footer nav{
-        margin-right: 10px;
+        margin: 10px;
         padding: 20px;
         }
         
@@ -548,36 +548,45 @@ footer ul li{
         }
 }
 
-@media screen and (max-width: 768px) {
-   /*** Général**/
-
-  
+@media screen and (max-width: 768px) { /*** Ecran de portable***/
+   
+    /***Search section**/
+   .search-form{
+    width:320px
+}
     /*** header ***/
 header 
         {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items:center;
     height: 200px;
     width: 100%;
-    padding: 0 10 10 0px;
         }
-        
+    
 #top-nav li:hover
         {
     border-top: none;
     border-bottom: solid 3px var(--blue);
+    width: 100%;
         }
-    
-#top-nav ul li
-        {   
-    display: flex;
+#top-nav{
+    display: block;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     text-align: center;
-        }
+    width: 100%;
+}
+    
+#top-nav ul li
+        {       
+    border-bottom: solid 3px var(--grey);
+    height: 80px;
+    width: 100%;
+        }        
+
 #top-logo
         {
     display: flex;
@@ -600,8 +609,9 @@ header
     align-items: center;
     text-align: center;
     margin-bottom: 20px;
+    width: 100%;
         }
-.button
+#search .button
         {
     display: none;
         }
@@ -624,9 +634,8 @@ header
         }
 .search-form .logo_loupe
         {
-    display:inline;
+    display: inline-block;
     border: none;
-    justify-content: end;
     width: 50px;
     height: 50px;
     background-color: var(--blue);
@@ -639,18 +648,60 @@ header
     
     /*** SECTION HEBERGEMENTS***/
         
-
+.lod h2{
+    padding-left: 10px;
+}
 aside{
-    width: 100%
+    max-width: 768px;
+    width: 100%;
         }
+#container-popular{
+    max-width: 100%;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+#title-popular{
+    padding-left: 20px;
+}
+#container-popular figure
+{
+    display:flex;
+          }
+.img-pop {
+    height: 180px;
+    width: 40%;
+    }            
+#container-popular .card {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+          }
+#container-popular .card-body{
+padding-top: 10px;
+padding-left: 20px;
+        }
+#container-popular h3, p{
+    font-size: medium;
+}
+    
+#container-popular .blue-stars {
+font-size: medium;
+padding-top: 50px;
+padding-left: 10px;
+}
+
 .lod{
     background-color: white;
 }
   
 #container-lodg{
-    width: 100%;
-    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 768px;
+    margin: 10px 35px 10px 0px;
+    
         }
       
 #container-lodg .card{
@@ -662,27 +713,25 @@ aside{
 .container-activities{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 100%;
-    height: 100%;
+    max-width: 768px;
+    padding: 20px;
+
 }
 .container-activities-row{
     width: 100%;
-
 }
 .container-activities-column{
     width: 100%;
-  
 }
 
 .container-activities .card{
-overflow: hidden;
+    overflow: hidden;
     height: 240px;
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
 }
 .container-activities-row .card{
     margin-right: 0px;
@@ -701,53 +750,53 @@ overflow: hidden;
 /*** FOOTER***/
 
 footer {
-    flex-direction: column;       
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start;
     }
 footer nav{
     padding: 5px;
-    margin-left: 15px;
-}
+    margin-left: 10px;
+    }
 
-footer .container{
-    display: block;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    background-color: rgb(222, 223, 223);
-    }
 footer ul a{
-    color: black
+    color: black;
     }
 }
-  
-@media (max-width:375px) /***Plus petites tailles d'écran de portable***/
+footer a{
+
+    display: flex;
+    justify-content: left;
+}  
+@media (max-width:375px){ /***Plus petites tailles d'écran de portable***/
     
     /*** Hébergements***/
-    
-    {
-        
+ 
     aside  {
-        margin: 0px;
-        padding: 20px 5px 20px 5px;
-        max-width: 300px;
+        padding: 5px;
+        max-width: 320px;
+    }
+    #container-popular .card .card-body{
+        padding-left: 1px;
     }
     #lodging h2{
           padding-left: 5px;
-          padding-bottom: 15px;
-          padding-top: 20px;
+          padding-bottom: 10px;
+          padding-top: 5px;
     }
     #container-lodg{  
-        
-        min-width: 180px;
-        max-width: 320px;        
+        max-width:320px;
+        padding-left: 0px;
+        padding-right: 15px;  
+        margin: 0px;      
     }    
  
     #container-lodg .card{
-        width: 265px;
-        overflow: hidden;
+        width: 100%;
     }
    section #activities{
-        max-width: 200px;
+        max-width: 320px;
     }
     #activities h2{
         padding-bottom: 10px;
